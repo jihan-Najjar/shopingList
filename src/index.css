@@ -6,8 +6,81 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+ul{
+  list-style: none;
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* align-items: center; */
+}
+.d-flex{
+  display: flex;
+  justify-content: space-between;
+
+
+}
+
+.hPadding{
+  padding: 0 .3rem;
+  width: 100%;
+  align-items: center;
+
+}
+.cartShop{
+  height: 30px;
+  width: 30px;
+  
+
+}
+.listItem{
+  flex-direction: column;
+  border: 2px solid black;
+  padding-bottom: 2px;
+  width: 300px;
+  height: 350px;
+  align-items: start;
+
+}
+.header{
+  background-color: rgb(242, 248, 246);
+  padding: .5em 1em;
+  align-items: center;
+  cursor: default;
+}
+.logo{
+  height: 70px;
+  width: 70px;
+}
+.card{
+  margin: 20px 0;
+}
+.header-nav{
+  font-weight: bold;
+
+
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+.cartList{
+  width: 20px;
+  height: 20px;
+}
+.header-nav li{
+/* border: 2px solid  black ; */
+padding: .7em .5em;
+
+}
+.header-nav li:hover{
+  border-bottom: 2px solid  black ;
+  transition: .1s ease;
+  cursor: pointer;
+  
+  }

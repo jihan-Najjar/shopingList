@@ -1,0 +1,2 @@
+const shoping=[]
+export {shoping}

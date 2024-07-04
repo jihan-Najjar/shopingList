@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import { data } from "./Data";
-import {shoping} from "./ShopingList"
-
-const Card = () => {
-  const [shopingList,setShopingList]=useState(shoping)
-  const card = data.map((item, index) => (
-    <li key={index} className="listItem d-flex">
+const Card = ({ setShopingList }) => {
+  const card = data.map((item) => (
+    <li key={item.id} className="listItem d-flex">
       <img
         alt={`card ${item.image}`}
         src={item.image}
@@ -14,20 +11,35 @@ const Card = () => {
       />
       <h3 className="hPadding">{item.name}</h3>
 
-      <section className="d-flex hPadding" >
-
+      <section className="d-flex hPadding">
         <h5>{item.price}$ </h5>
-        <button onClick={()=>setShopingList(prev=>[...prev,{name:item.name,numberOfparts:1,price:item.price}])}>
-        <img className="cartShop" src={require("../assets/icons8-shopping-cart-48.png")} alt="cart shopping icon" />
-
+        <button
+          onClick={() => {
+            setShopingList((prev) => {
+              if (prev.find((i) => i.id === item.id)) {
+                return prev.map((i) =>
+                  i.id === item.id
+                    ? { ...i, numberOfparts: i.numberOfparts + 1 }
+                    : i
+                );
+              } else {
+                return [...prev, { ...item, numberOfparts: 1 }];
+              }
+            });
+          }}
+        >
+          <img
+            className="cartShop"
+            src={require("../assets/icons8-shopping-cart-48.png")}
+            alt="cart shopping icon"
+          />
         </button>
       </section>
     </li>
   ));
-  console.log(shopingList)
   return (
     <div className="card">
-      <ul>{card}</ul>
+      <ul className="d-flex">{card}</ul>
     </div>
   );
 };

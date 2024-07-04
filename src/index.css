@@ -21,16 +21,19 @@ body {
 
 
 }
-ul{
+
+ul {
   list-style: none;
 
 }
+
 .card ul {
   gap: 7px;
   flex-wrap: wrap;
   justify-content: center;
   /* align-items: center; */
 }
+
 .hPadding {
   padding: 0 .3rem;
   width: 100%;
@@ -44,54 +47,78 @@ ul{
 
 
 }
-.shopingList{
+.Shopping{
+  justify-content: center;
+  /* align-items: center; */
+  /* flex-grow: 1; */
+  flex-direction: column;
+  gap: 50px;
+}
+.iiiii{
+  justify-content: center;
+}
+.Shopping button{
+padding: .3em 0;
+width: 150px;
+}
+.shopingList {
   flex-direction: column;
 }
-.shopingList li{
-  
+
+.shopingList li {
+
   border: 2px solid black;
   padding: .5em .7em;
   align-items: center;
 }
-.shopingList li.ul-header{
-  
+
+.shopingList li.ul-header {
+
   background-color: rgb(26, 24, 35);
   color: rgb(225, 231, 235);
 }
-.shopingList li div,.shopingList li button{
+
+.shopingList li div,
+.shopingList li button {
   width: 20%;
   align-items: center;
   justify-content: center;
 
 }
-.shopingList li button{
-border: none;
-background-color: rgb(167, 118, 118,0);
-/* opacity: 0; */
+
+.shopingList li button {
+  border: none;
+  background-color: rgb(167, 118, 118, 0);
+  /* opacity: 0; */
 }
-.imgItemShop{
+
+.imgItemShop {
   height: 40px;
   width: 40px;
 }
-.shopingList h3{
+
+.shopingList h3 {
   width: 20%;
   text-align: center;
 }
-.shopingList li h3.spaceBetChar{
+
+.shopingList li h3.spaceBetChar {
   letter-spacing: 3px;
   word-spacing: 19px;
   width: 80%;
 }
-.shopingList li.emptyBasket{
+
+.shopingList li.emptyBasket {
   border: none;
-  height:200px ;
+  height: 200px;
   justify-content: center;
   font-size: larger;
   font-weight: bolder;
-background-color: rgb(167, 118, 118,0);
+  background-color: rgb(167, 118, 118, 0);
 
 
 }
+
 .listItem {
   flex-direction: column;
   border: 2px solid black;
@@ -145,4 +172,18 @@ a {
   transition: .1s ease;
   cursor: pointer;
 
+}
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  border: 2px solid black;
+  width: 300px;
+  border-radius: 13px;
+}
+form label{
+  width: 100%;
+  display: inline;
+  background-color: red;
 }
